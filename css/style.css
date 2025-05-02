@@ -1,0 +1,126 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, Times, "Times New Roman", serif;
+    line-height: 1.5;
+    color: #333;
+    background-color: #fff;
+    /* Left-aligned layout instead of centered */
+    display: block;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 650px;
+    margin: 0 auto;
+    padding-top: 120px; 
+}
+
+/* Typography */
+h1 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-bottom: 1.5rem;
+}
+
+.smaller-heading {
+    font-size: 1.2 rem; 
+}
+
+p {
+    margin-bottom: 1.3rem;
+    font-size: 1rem;
+}
+
+/* Links section */
+.links ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.links li {
+    display: inline-block;
+}
+
+.links a {
+    text-decoration: none;
+    color: #333;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+/* Pages section - for links to other pages */
+.pages {
+    margin-top: 0.5rem;
+}
+
+.pages a {
+    text-decoration: none;
+    color: #333;
+    display: inline-block;
+}
+
+.pages a:hover {
+    text-decoration: underline;
+}
+
+/* Home link for experience page */
+.back-link {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    text-decoration: none;
+    color: #333;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* Experience page styling */
+.experience-item {
+    margin-bottom: 2.5rem;
+}
+
+.experience-title {
+    font-weight: normal;
+    font-size: 1.1rem;
+    margin-bottom: 0.2rem;
+}
+
+.experience-company {
+    font-weight: normal;
+}
+
+.experience-date {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    .container {
+        padding-top: 80px;
+    }
+    
+    body {
+        padding: 20px 16px;
+    }
+    
+    /* Improve link display on mobile */
+    .links ul {
+        flex-wrap: wrap;
+        gap: 0.8rem;
+    }
+}
