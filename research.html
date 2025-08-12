@@ -26,20 +26,29 @@
     a:hover { text-decoration: underline; }
     .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
     nav {
-      position: sticky; top: 0; background: var(--bg); border-bottom: 1px solid var(--border);
+      position: sticky; top: 0; background: #1e3a47; border-bottom: 1px solid var(--border);
+    }
+    #network-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      background: #fafafa;
     }
     .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
-    .brand { font-weight: 700; }
+    .brand { font-weight: 700; color: white; }
     .nav-links { display: flex; gap: 18px; align-items: center; }
-    .nav-links a { padding: 8px 10px; border-radius: 8px; }
-    .nav-links a:hover { background: rgba(15, 118, 110, 0.08); text-decoration: none; }
+    .nav-links a { padding: 8px 10px; border-radius: 8px; color: white; }
+    .nav-links a:hover { background: rgba(255, 255, 255, 0.15); text-decoration: none; }
     .nav-links a.active { background: rgba(15, 118, 110, 0.15); color: var(--accent); }
-    .hero { padding: 80px 0 28px; }
+    .hero { padding: 80px 0 16px; }
     h1 { font-size: clamp(36px, 5vw, 46px); margin: 0 0 8px; }
-    .tagline { font-size: 18px; color: var(--muted); margin-bottom: 18px; }
-    .content { padding: 40px 0 64px; }
-    .research-item { margin-bottom: 40px; padding-bottom: 32px; border-bottom: 1px solid var(--border); display: flex; gap: 24px; align-items: flex-start; }
-    .research-item:last-child { border-bottom: none; }
+    .tagline { font-size: 18px; color: var(--muted); margin-bottom: 16px; }
+    .content { padding: 24px 0 64px; }
+    .research-item { margin-bottom: 40px; padding: 32px; background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); display: flex; gap: 24px; align-items: flex-start; }
+    .research-item:last-child { margin-bottom: 40px; }
     .research-content { flex: 1; }
     .research-image { flex: 0 0 240px; height: 180px; background: var(--border); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: 14px; }
     .research-title { font-size: 20px; font-weight: 600; margin-bottom: 8px; }
@@ -48,11 +57,72 @@
     .research-links { display: flex; gap: 8px; }
     .research-link { font-size: 14px; color: var(--muted); padding: 4px 8px; border: 1px solid var(--border); border-radius: 6px; }
     .research-link:hover { color: var(--accent); border-color: var(--accent); text-decoration: none; }
-    footer { border-top: 1px solid var(--border); padding: 18px 0 40px; color: var(--muted); font-size: 14px; }
+    footer { border-top: 1px solid var(--border); padding: 18px 0 40px; background: #1e3a47; color: white; font-size: 14px; }
     .foot-row { display:flex; justify-content:space-between; flex-wrap: wrap; gap: 10px; }
+    .foot-row a { color: #93c5fd; }
+    .foot-row a:hover { color: white; }
+    /* Modal styles */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      z-index: 1000;
+      backdrop-filter: blur(4px);
+    }
+    .modal-content {
+      position: relative;
+      margin: 20px auto;
+      width: 90%;
+      height: 90%;
+      max-width: 900px;
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    }
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 24px;
+      background: #1e3a47;
+      color: white;
+    }
+    .modal-title {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 600;
+    }
+    .modal-close {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+      padding: 4px 8px;
+      border-radius: 4px;
+      transition: background 0.2s;
+    }
+    .modal-close:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+    .modal-body {
+      width: 100%;
+      height: calc(100% - 64px);
+    }
+    .modal iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
   </style>
 </head>
 <body>
+  <canvas id="network-bg"></canvas>
   <nav>
     <div class="wrap nav-inner">
       <a class="brand" href="index.html">Matthew Pan</a>
@@ -76,7 +146,7 @@
 
   <header class="hero wrap">
     <h1>Research</h1>
-    <p class="tagline">AI-driven methods for scientific research</p>
+    <p class="tagline"><strong>AI-driven methods for scientific research</strong></p>
   </header>
 
   <section class="wrap content">
@@ -115,15 +185,138 @@
     </div>
   </section>
 
+  <!-- Resume Modal -->
+  <div id="resumeModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">Matthew Pan - Resume</h3>
+        <button class="modal-close" onclick="closeResumeModal()">&times;</button>
+      </div>
+      <div class="modal-body">
+        <iframe src="/resume.pdf" type="application/pdf"></iframe>
+      </div>
+    </div>
+  </div>
+
   <footer>
     <div class="wrap foot-row">
       <span>© <span id="y"></span> Matthew Pan</span>
-      <span><a href="/resume.pdf" target="_blank" rel="noopener">CV (PDF)</a> • Updated Aug 2025</span>
+      <span><a href="#" onclick="openResumeModal(); return false;">CV (PDF)</a> • Updated Aug 2025</span>
     </div>
   </footer>
 
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
+    
+    // Resume modal functions
+    function openResumeModal() {
+      document.getElementById('resumeModal').style.display = 'block';
+      document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    }
+    
+    function closeResumeModal() {
+      document.getElementById('resumeModal').style.display = 'none';
+      document.body.style.overflow = 'auto'; // Restore scrolling
+    }
+    
+    // Close modal when clicking outside
+    document.getElementById('resumeModal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeResumeModal();
+      }
+    });
+    
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && document.getElementById('resumeModal').style.display === 'block') {
+        closeResumeModal();
+      }
+    });
+    
+    const canvas = document.getElementById("network-bg");
+    const ctx = canvas.getContext("2d");
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    window.addEventListener("resize", () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      draw();
+    });
+
+    // Adapted colors for clean feel
+    const colors = [
+      "#047857", "#0f766e", "#059669", // Teals/emerald
+      "#3b82f6", "#2563eb", "#1d4ed8", // Blues
+      "#6b7280", "#9ca3af"              // Grays for subtlety
+    ];
+
+    function randomColor() {
+      return colors[Math.floor(Math.random() * colors.length)];
+    }
+
+    // Seeded random function for consistent patterns
+    function seededRandom(seed) {
+      var x = Math.sin(seed++) * 10000;
+      return x - Math.floor(x);
+    }
+
+    function draw() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      const nodes = [];
+      const numNodes = 100; // More density
+      let seed = 12345; // Fixed seed for consistency
+
+      // Create nodes with seeded random
+      for (let i = 0; i < numNodes; i++) {
+        nodes.push({
+          x: seededRandom(seed++) * canvas.width,
+          y: seededRandom(seed++) * canvas.height,
+          r: seededRandom(seed++) * 25 + 8, // Bigger circles
+          color: colors[Math.floor(seededRandom(seed++) * colors.length)]
+        });
+      }
+
+      // Draw edges (more connections)
+      ctx.lineWidth = 1;
+      ctx.globalAlpha = 0.3; // More obvious
+      for (let i = 0; i < numNodes; i++) {
+        for (let j = i + 1; j < numNodes; j++) {
+          const dx = nodes[i].x - nodes[j].x;
+          const dy = nodes[i].y - nodes[j].y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          // Connect more nodes
+          if (distance < Math.min(canvas.width, canvas.height) * 0.25 && seededRandom(seed++) > 0.5) {
+            ctx.beginPath();
+            ctx.moveTo(nodes[i].x, nodes[i].y);
+            ctx.lineTo(nodes[j].x, nodes[j].y);
+            ctx.strokeStyle = "#0f766e";
+            ctx.stroke();
+          }
+        }
+      }
+
+      // Draw nodes
+      ctx.globalAlpha = 0.3; // More obvious nodes
+      for (let node of nodes) {
+        const gradient = ctx.createRadialGradient(
+          node.x, node.y, node.r * 0.1,
+          node.x, node.y, node.r
+        );
+        gradient.addColorStop(0, node.color);
+        gradient.addColorStop(1, "rgba(250, 250, 250, 0)");
+
+        ctx.beginPath();
+        ctx.arc(node.x, node.y, node.r, 0, Math.PI * 2);
+        ctx.fillStyle = gradient;
+        ctx.fill();
+      }
+    }
+
+    draw();
   </script>
 </body>
 </html>
