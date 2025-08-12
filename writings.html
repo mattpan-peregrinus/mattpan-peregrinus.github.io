@@ -50,8 +50,10 @@
     h1 { font-size: clamp(36px, 5vw, 46px); margin: 0 0 8px; }
     .tagline { font-size: 18px; color: var(--muted); margin-bottom: 16px; }
     .content { padding: 24px 0 64px; flex: 1; }
-    .writing-item { margin-bottom: 40px; padding: 32px; background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    .writing-item { margin-bottom: 40px; padding: 32px; background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); display: flex; gap: 24px; align-items: flex-start; }
     .writing-item:last-child { margin-bottom: 40px; }
+    .writing-content { flex: 1; }
+    .writing-image { flex: 0 0 200px; height: 140px; background: var(--border); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: 14px; }
     .writing-header { margin-bottom: 8px; }
     .writing-title { font-size: 20px; font-weight: 600; margin-bottom: 4px; }
     .writing-title a { color: var(--fg); }
@@ -154,9 +156,171 @@
   </header>
 
   <section class="wrap content">
-    <div class="coming-soon">
-      <p>Writing coming soon. In the meantime, check out my <a href="https://medium.com/@matthew-pan" target="_blank">Medium blog</a> for occasional thoughts and reflections.</p>
+
+    <div class="writing-item">
+      <div class="writing-image">
+        <img src="images/gap_year_2.jpg" alt="Gap year image 2" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+      </div>
+      <div class="writing-content">
+        <div class="writing-header">
+          <div class="writing-title"><a href="https://medium.com/@matthew-pan/%E4%BC%91%E5%AD%B8%E7%AD%86%E8%A8%98-%E4%B8%8B-%E7%9C%9F%E6%AD%A3%E7%9A%84%E5%BF%AB%E6%A8%82%E5%92%8C%E5%AD%B8%E7%BF%92-d086bc5f0692" target="_blank">On Gap Year (2)</a></div>
+          <div class="writing-meta">January 1, 2025 • Blog post</div>
+        </div>
+        <div class="writing-desc">
+          Reflections from gap year (2023-2024). Written in Mandarin.
+        </div>
+      </div>
     </div>
+
+    <div class="writing-item">
+      <div class="writing-image">
+        <img src="images/dalio-martenson.jpg" alt="Dalio and Martenson article preview" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+      </div>
+      <div class="writing-content">
+        <div class="writing-header">
+          <div class="writing-title"><a href="https://medium.com/@matthew-pan/dalio-and-martenson-a-macro-way-of-investing-53e376062a70" target="_blank">Dalio and Martenson: A Macro Way of Investing</a></div>
+          <div class="writing-meta">April 6, 2024 • Blog post</div>
+        </div>
+        <div class="writing-desc">
+          Investment philosophies of Ray Dalio and Chris Martenson. Or possibly, life philosophies. 
+        </div>
+      </div>
+    </div>
+
+    <div class="writing-item">
+      <div class="writing-image">
+        <img src="images/munger-aurelius.jpg" alt="Munger and Aurelius article preview" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+      </div>
+      <div class="writing-content">
+        <div class="writing-header">
+          <div class="writing-title"><a href="https://medium.com/@matthew-pan/munger-and-aurelius-a-stoic-way-of-investing-092d911346af" target="_blank">Munger and Aurelius: A Stoic Way of Investing</a></div>
+          <div class="writing-meta">March 16, 2024 • Blog post</div>
+        </div>
+        <div class="writing-desc">
+          Investment philosophies of Charlie Munger and Marcus Aurelius. Or possibly, life philosophies.
+        </div>
+      </div>
+    </div>
+
+    <div class="writing-item">
+      <div class="writing-image">
+        <img src="images/web3-problems.jpg" alt="Web3 problems article preview" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+      </div>
+      <div class="writing-content">
+        <div class="writing-header">
+          <div class="writing-title"><a href="https://medium.com/@matthew-pan/web3-weve-got-some-problems-0a9320ca2200" target="_blank">Web3, We've Got Some Problems</a></div>
+          <div class="writing-meta">Februrary 25, 2024 • Blog post</div>
+        </div>
+        <div class="writing-desc">
+          Is the Bitcoin hype here to stay? Not so fast.
+        </div>
+      </div>
+    </div>
+
+    <div class="writing-item">
+      <div class="writing-image">
+        <img src="images/gap_year_1.jpg" alt="Gap year image 1" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+      </div>
+      <div class="writing-content">
+        <div class="writing-header">
+          <div class="writing-title"><a href="https://medium.com/@matthew-pan/%E4%BC%91%E5%AD%B8%E7%AD%86%E8%A8%98-%E5%AD%B8%E6%9C%83%E7%95%B6%E4%B8%80%E5%BC%B5%E7%99%BD%E7%B4%99-4c3f6653652a" target="_blank">On Gap Year (1)</a></div>
+          <div class="writing-meta">Janurary 7, 2024 • Blog post</div>
+        </div>
+        <div class="writing-desc">
+          Reflections from gap year (2023-2024). Written in Mandarin.
+        </div>
+      </div>
+    </div>
+
+    <div class="writing-item">
+      <div class="writing-image">
+        <img src="images/zkml-article.jpg" alt="zkML article preview" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+      </div>
+      <div class="writing-content">
+        <div class="writing-header">
+          <div class="writing-title"><a href="https://medium.com/@matthew-pan/is-zero-knowledge-machine-learning-zkml-legit-da312e46505f" target="_blank">Is Zero-Knowledge Machine Learning (zkML) Legit?</a></div>
+          <div class="writing-meta">December 1, 2023 • Blog post</div>
+        </div>
+        <div class="writing-desc">
+          Sure there’s machine learning and all that, but what the heck is zero-knowledge machine learning (zkML)?
+        </div>
+      </div>
+    </div>
+
+    <div class="writing-item">
+      <div class="writing-image">
+        <img src="images/cryptocurrency-article.jpg" alt="Cryptocurrency article preview" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+      </div>
+      <div class="writing-content">
+        <div class="writing-header">
+          <div class="writing-title"><a href="https://mises.org/mises-wire/cryptocurrency-integrity-destroyer-or-policy-scapegoat" target="_blank">Cryptocurrency: Integrity Destroyer or Policy Scapegoat?</a></div>
+          <div class="writing-meta">November 17, 2023 • Think tank article</div>
+        </div>
+        <div class="writing-desc">
+          Is cryptocurrency a scam or is it a legitimate alternative to state-corrupted money? Political elites want to eliminate it altogether, but that alone should tell us we need to better understand this alternative money source.
+        </div>
+      </div>
+    </div>
+
+    <div class="writing-item">
+      <div class="writing-image">
+        <img src="images/world-behind-book.jpg" alt="The World Behind book cover" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+      </div>
+      <div class="writing-content">
+        <div class="writing-header">
+          <div class="writing-title"><a href="https://www.amazon.com/World-Behind-Brief-Model-Society/dp/B0BN7RDBPZ" target="_blank">The World Behind: A Brief Model of Our Society</a></div>
+          <div class="writing-meta">November 23, 2022 • Book</div>
+        </div>
+        <div class="writing-desc">
+          Poverty. Corruption. Warfare. Why are these issues so prevalent? Is there a framework underlying socio-economic forces? In essence, how does our society work? Accredited by scholars from Academia Sinica, Mises Institute, and other institutes, this book seeks to answer these fundamental questions.
+        </div>
+      </div>
+    </div>
+
+    <div class="writing-item">
+      <div class="writing-image">
+        <img src="images/federal-reserve.jpg" alt="Federal Reserve article preview" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+      </div>
+      <div class="writing-content">
+        <div class="writing-header">
+          <div class="writing-title"><a href="https://mises.org/mises-wire/how-public-lost-trust-federal-reserve-which-should-never-have-been-trusted-first-place" target="_blank">How the Public Lost Trust in the Federal Reserve</a></div>
+          <div class="writing-meta">August 17, 2022 • Think tank article</div>
+        </div>
+        <div class="writing-desc">
+          Between its political happy talk in the contrast to reality and its broken promises, whatever credibility the Fed had in the past is long gone.
+        </div>
+      </div>
+    </div>
+
+    <div class="writing-item">
+      <div class="writing-image">
+        <img src="images/sectarianism.jpg" alt="Sectarianism article preview" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+      </div>
+      <div class="writing-content">
+        <div class="writing-header">
+          <div class="writing-title"><a href="https://fee.org/articles/sectarianism-how-it-arose-and-how-to-solve-it/" target="_blank">Sectarianism: How it Arose, and How to Solve it</a></div>
+          <div class="writing-meta">February 27, 2022 • Think tank article</div>
+        </div>
+        <div class="writing-desc">
+          Amid the rapid rise of political sectarianism, the modern presidency has become a divider rather than a mender.
+        </div>
+      </div>
+    </div>
+
+    <!-- Template for new entries - just copy this structure:
+    <div class="writing-item">
+      <div class="writing-image">[ Image placeholder ]</div>
+      <div class="writing-content">
+        <div class="writing-header">
+          <div class="writing-title"><a href="[LINK_URL]" target="_blank">[ARTICLE_TITLE]</a></div>
+          <div class="writing-meta">[DATE] • [READ_TIME] min read</div>
+        </div>
+        <div class="writing-desc">
+          [ARTICLE_DESCRIPTION]
+        </div>
+      </div>
+    </div>
+    -->
   </section>
 
   <!-- Resume Modal -->
