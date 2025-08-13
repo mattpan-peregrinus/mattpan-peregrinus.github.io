@@ -57,6 +57,17 @@
     .research-links { display: flex; gap: 8px; }
     .research-link { font-size: 14px; color: var(--muted); padding: 4px 8px; border: 1px solid var(--border); border-radius: 6px; }
     .research-link:hover { color: var(--accent); border-color: var(--accent); text-decoration: none; }
+    .research-link.disabled { 
+      color: #9ca3af; 
+      border-color: #e5e7eb; 
+      cursor: not-allowed; 
+      opacity: 0.6; 
+    }
+    .research-link.disabled:hover { 
+      color: #9ca3af; 
+      border-color: #e5e7eb; 
+      text-decoration: none; 
+    }
     footer { border-top: 1px solid var(--border); padding: 18px 0 40px; background: #1e3a47; color: white; font-size: 14px; }
     .foot-row { display:flex; justify-content:space-between; flex-wrap: wrap; gap: 10px; }
     .foot-row a { color: #93c5fd; }
@@ -161,8 +172,8 @@
           Medical Deep Research is an open-source, agent-based platform that combines LLMs with structured reasoning, dynamic resource integration, and customizable reporting to support expert-level medical and clinical inquiry.
         </div>
         <div class="research-links">
-          <!--<a href="#" class="research-link">Paper</a>
-          <a href="#" class="research-link">GitHub</a>-->
+          <span class="research-link disabled">Code - Coming Soon</span>
+          <span class="research-link disabled">Paper - Coming Soon</span>
         </div>
       </div>
     </div>
@@ -178,8 +189,8 @@
           Graph neural network (GNN) and physics-informed neural network (PINN) frameworks for modeling cosmological structure formation, enabling efficient large-scale simulation and analysis.
         </div>
         <div class="research-links">
-          <!--<a href="#" class="research-link">Paper</a> 
-          <a href="#" class="research-link">GitHub</a> -->
+          <span class="research-link disabled">Code - Coming Soon</span>
+          <span class="research-link disabled">Paper - Coming Soon</span>
         </div>
       </div>
     </div>
