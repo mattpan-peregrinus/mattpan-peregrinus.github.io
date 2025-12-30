@@ -21,6 +21,7 @@
     body {
       margin: 0; background: var(--bg); color: var(--fg);
       font: 16px/1.65 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      min-height: 100vh; display: flex; flex-direction: column;
     }
     a { color: var(--link); text-decoration: none; }
     a:hover { text-decoration: underline; }
@@ -46,7 +47,7 @@
     .hero { padding: 80px 0 16px; }
     h1 { font-size: clamp(36px, 5vw, 46px); margin: 0 0 8px; }
     .tagline { font-size: 18px; color: var(--muted); margin-bottom: 16px; }
-    .content { padding: 24px 0 64px; }
+    .content { padding: 24px 0 64px; flex: 1; }
     .project-item { margin-bottom: 40px; padding: 32px; background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); display: flex; gap: 24px; align-items: flex-start; }
     .project-item:last-child { margin-bottom: 40px; }
     .project-content { flex: 1; }
@@ -139,8 +140,8 @@
       <a class="brand" href="index.html">Matthew Pan</a>
       <div class="nav-links">
         <a href="index.html">Home</a>
-        <a href="research.html">Research</a>
-        <a href="projects.html" class="active">Projects</a>
+        <a href="publication.html">Publication</a>
+        <a href="experience.html" class="active">Experience</a>
         <a href="writings.html">Writing</a>
         <a href="https://github.com/mattpan-peregrinus" target="_blank" title="GitHub">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.530.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
@@ -156,120 +157,20 @@
   </nav>
 
   <header class="hero wrap">
-    <h1>Projects</h1>
-    <p class="tagline"><strong>Software projects and creative builds</strong></p>
   </header>
 
   <section class="wrap content">
-    <div class="project-item">
-      <div class="project-image">
-        <img src="images/inspirhub-screenshot.jpg" alt="InspirHub interface" style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px;">
-      </div>
-      <div class="project-content">
-        <div class="project-title">InspirHub</div>
-        <div class="project-tech">Next.js • Supabase • Vercel</div>
-        <div class="project-desc">
-          A collaborative web platform for discovering and sharing project ideas, featuring real-time database integration, tag-based search, and detailed project pages. In active development.
-        </div>
-        <div class="project-links">
-          <a href="https://github.com/mattpan-peregrinus/inspir-hub" class="project-link">GitHub</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="project-item">
-      <div class="project-image">
-        <img src="images/fantasy-baseball.jpg" alt="Fantasy Baseball Agent interface" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
-      </div>
-      <div class="project-content">
-        <div class="project-title">Fantasy Baseball Agent</div>
-        <div class="project-tech">Python • NumPy • Pandas • espn-api</div>
-        <div class="project-desc">
-          A command-line analytics tool that leverages ESPN's Fantasy Baseball API to optimize roster decisions, identify waiver wire opportunities, and generate trade recommendations — ultimately guiding my team to a league championship.
-        </div>
-        <div class="project-links">
-          <a href="https://github.com/mattpan-peregrinus/fantasy-baseball-agent" class="project-link">GitHub</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="project-item">
-      <div class="project-image">
-        <img src="images/interior-design.jpg" alt="Interior Design App 3D visualization" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
-      </div>
-      <div class="project-content">
-        <div class="project-title">Interior Design App</div>
-        <div class="project-tech">Javascript • Node.js • Three.js • Vite</div>
-        <div class="project-desc">
-          Tartan Hacks '25. A browser-based 3D visualization app that enables real-time interior space design.
-        </div>
-        <div class="project-links">
-          <a href="https://github.com/mattpan-peregrinus/ARrange_App" class="project-link">GitHub</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="project-item">
-      <div class="project-image">
-        <img src="images/virtual-machine.jpg" alt="Virtual Machine architecture diagram" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
-      </div>
-      <div class="project-content">
-        <div class="project-title">Virtual Machine</div>
-        <div class="project-tech">c0 • custom bytecode specifications</div>
-        <div class="project-desc">
-          Class project for 15-122: Principles of Imperative Computation. Implemented a stack-based virtual machine in c0, including instruction parsing, memory management, and execution control. Code unavailable due to CMU's academic integrity policy.
-        </div>
-      </div>
-    </div>
   </section>
 
-  <!-- Resume Modal -->
-  <div id="resumeModal" class="modal">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3 class="modal-title">Matthew Pan - Resume</h3>
-        <button class="modal-close" onclick="closeResumeModal()">&times;</button>
-      </div>
-      <div class="modal-body">
-        <iframe src="/resume.pdf" type="application/pdf"></iframe>
-      </div>
-    </div>
-  </div>
 
   <footer>
     <div class="wrap foot-row">
       <span>© <span id="y"></span> Matthew Pan</span>
-      <span><a href="#" onclick="openResumeModal(); return false;">CV (PDF)</a> • Updated Aug 2025</span>
     </div>
   </footer>
 
   <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-    
-    // Resume modal functions
-    function openResumeModal() {
-      document.getElementById('resumeModal').style.display = 'block';
-      document.body.style.overflow = 'hidden'; // Prevent background scrolling
-    }
-    
-    function closeResumeModal() {
-      document.getElementById('resumeModal').style.display = 'none';
-      document.body.style.overflow = 'auto'; // Restore scrolling
-    }
-    
-    // Close modal when clicking outside
-    document.getElementById('resumeModal').addEventListener('click', function(e) {
-      if (e.target === this) {
-        closeResumeModal();
-      }
-    });
-    
-    // Close modal with Escape key
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape' && document.getElementById('resumeModal').style.display === 'block') {
-        closeResumeModal();
-      }
-    });
+    document.getElementById('y').textContent = '2026';
     
     const canvas = document.getElementById("network-bg");
     const ctx = canvas.getContext("2d");
