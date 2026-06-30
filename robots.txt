@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://thematthewpan.com/sitemap.xml

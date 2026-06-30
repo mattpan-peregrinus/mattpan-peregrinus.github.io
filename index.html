@@ -4,32 +4,50 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>Matthew Pan</title>
-<meta name="description" content="Matthew Pan - technical founder building self-building automation for IT. Founder & CTO of Capture Lab." />
+<title>Matthew Pan — Founder &amp; CTO of Capture Lab</title>
+<meta name="description" content="Personal website of Matthew Pan, Founder &amp; CTO of Capture Lab." />
 <meta name="author" content="Matthew Pan" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 <meta name="theme-color" content="#0a0a0a" />
+<link rel="canonical" href="https://thematthewpan.com/" />
 
 <!-- Open Graph -->
 <meta property="og:type" content="website" />
-<meta property="og:title" content="Matthew Pan" />
-<meta property="og:description" content="Technical founder building self-building automation for IT." />
-<meta property="og:url" content="https://mattpan-peregrinus.github.io/" />
+<meta property="og:title" content="Matthew Pan — Founder &amp; CTO of Capture Lab" />
+<meta property="og:description" content="Personal website of Matthew Pan, Founder &amp; CTO of Capture Lab." />
+<meta property="og:url" content="https://thematthewpan.com/" />
 <meta property="og:site_name" content="Matthew Pan" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:image" content="https://thematthewpan.com/og-image.png" />
+<meta property="og:image:secure_url" content="https://thematthewpan.com/og-image.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Matthew Pan — Founder &amp; CTO of Capture Lab" />
 
 <!-- Twitter -->
-<meta name="twitter:card" content="summary" />
+<meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@the_matthew_pan" />
-<meta name="twitter:title" content="Matthew Pan" />
-<meta name="twitter:description" content="Technical founder building self-building automation for IT." />
+<meta name="twitter:creator" content="@the_matthew_pan" />
+<meta name="twitter:title" content="Matthew Pan — Founder &amp; CTO of Capture Lab" />
+<meta name="twitter:description" content="Personal website of Matthew Pan, Founder &amp; CTO of Capture Lab." />
+<meta name="twitter:image" content="https://thematthewpan.com/og-image.png" />
+<meta name="twitter:image:alt" content="Matthew Pan — Founder &amp; CTO of Capture Lab" />
 
-<link rel="canonical" href="https://mattpan-peregrinus.github.io/" />
+<!-- Icons & manifest -->
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
 
-<!-- Inline SVG favicon: MP monogram, white on black -->
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='8' fill='%230a0a0a'/%3E%3Cg fill='none' stroke='%23ededed' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='7,29 7,11 14,21 21,11 21,29'/%3E%3Cpath d='M27 11 L27 29 M27 11 H32 a4.5 4.2 0 0 1 0 9 H27'/%3E%3C/g%3E%3C/svg%3E" />
-
+<!-- Fonts: preconnect + non-render-blocking stylesheet -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet" />
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" media="print" onload="this.media='all'" />
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" /></noscript>
 
 <style>
   :root {
@@ -38,7 +56,7 @@
     --bright:  #ededed;   /* names, titles */
     --link:    #cfcfcf;
     --link-ul: rgba(255, 255, 255, 0.26);
-    --dim:     #6f6f6f;   /* labels, meta */
+    --dim:     #808080;   /* labels, meta — WCAG AA on --bg */
     --rule:    rgba(255, 255, 255, 0.09);
 
     --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -106,6 +124,7 @@
   .label {
     font-family: var(--mono);
     font-size: 0.8rem;
+    font-weight: 400;
     color: var(--dim);
     letter-spacing: 0.02em;
     margin: 0 0 1.6rem;
@@ -123,6 +142,7 @@
     gap: 1.5rem;
   }
   .entry-title {
+    margin: 0;
     color: var(--bright);
     font-size: 0.97rem;
     font-weight: 500;
@@ -188,6 +208,54 @@
     .entry-row { flex-direction: column; gap: 0.35rem; }
   }
 </style>
+
+<!-- Structured data: Person, Organization (Capture Lab), WebSite -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://thematthewpan.com/#matthew-pan",
+      "name": "Matthew Pan",
+      "url": "https://thematthewpan.com/",
+      "image": "https://thematthewpan.com/og-image.png",
+      "jobTitle": "Founder & CTO",
+      "description": "Technical founder building self-building automation for IT.",
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Carnegie Mellon University",
+        "url": "https://www.cmu.edu/"
+      },
+      "worksFor": { "@id": "https://www.capture-lab.com/#organization" },
+      "knowsAbout": ["IT Automation", "Machine Learning", "Artificial Intelligence", "Software Engineering"],
+      "sameAs": [
+        "https://x.com/the_matthew_pan",
+        "https://github.com/mattpan-peregrinus",
+        "https://www.linkedin.com/in/matthew-pan-214146275/",
+        "https://medium.com/@matthew-pan"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.capture-lab.com/#organization",
+      "name": "Capture Lab",
+      "url": "https://www.capture-lab.com/",
+      "description": "Self-building automation that learns how a company's IT works and keeps the automation up to date as things change.",
+      "founder": { "@id": "https://thematthewpan.com/#matthew-pan" }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://thematthewpan.com/#website",
+      "url": "https://thematthewpan.com/",
+      "name": "Matthew Pan",
+      "description": "Personal site of Matthew Pan, Founder & CTO of Capture Lab.",
+      "inLanguage": "en",
+      "publisher": { "@id": "https://thematthewpan.com/#matthew-pan" }
+    }
+  ]
+}
+</script>
 </head>
 
 <body>
@@ -206,11 +274,11 @@
     <hr />
 
     <section>
-      <p class="label"><span class="slash">/</span>Now</p>
+      <h2 class="label"><span class="slash">/</span>Now</h2>
 
       <div class="entry">
         <div class="entry-row">
-          <span class="entry-title">Founder &amp; CTO <span class="sep">@</span> <a href="https://www.capture-lab.com/" target="_blank" rel="noopener noreferrer">Capture Lab</a></span>
+          <h3 class="entry-title">Founder &amp; CTO <span class="sep">@</span> <a href="https://www.capture-lab.com/" target="_blank" rel="noopener noreferrer">Capture Lab</a></h3>
           <span class="entry-meta">2026-</span>
         </div>
         <p class="entry-desc">Self-building automation that learns how a company’s IT works and keeps the automation up to date as things change.</p>
@@ -218,25 +286,25 @@
     </section>
 
     <section style="margin-top: 2.75rem;">
-      <p class="label"><span class="slash">/</span>Previously</p>
+      <h2 class="label"><span class="slash">/</span>Previously</h2>
 
       <div class="entry">
         <div class="entry-row">
-          <span class="entry-title">Researcher <span class="sep">@</span> <a href="https://www.ml.cmu.edu/" target="_blank" rel="noopener noreferrer">CMU MLD</a></span>
+          <h3 class="entry-title">Researcher <span class="sep">@</span> <a href="https://www.ml.cmu.edu/" target="_blank" rel="noopener noreferrer">CMU MLD</a></h3>
           <span class="entry-meta"><a href="https://openreview.net/forum?id=nkt0fG4Y4X&amp;referrer=%5Bthe%20profile%20of%20Matthew%20Pan%5D(%2Fprofile%3Fid%3D~Matthew_Pan2)" target="_blank" rel="noopener noreferrer">NeurIPS 2025 GenAI4Health<svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></span>
         </div>
       </div>
 
       <div class="entry">
         <div class="entry-row">
-          <span class="entry-title">ML Engineer <span class="sep">@</span> <a href="https://netramindinnovations.com/" target="_blank" rel="noopener noreferrer">Netramind Innovations</a></span>
+          <h3 class="entry-title">ML Engineer <span class="sep">@</span> <a href="https://netramindinnovations.com/" target="_blank" rel="noopener noreferrer">Netramind Innovations</a></h3>
           <span class="entry-meta"><a href="https://iovs.arvojournals.org/article.aspx?articleid=2813045" target="_blank" rel="noopener noreferrer">IOVS 2026<svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></span>
         </div>
       </div>
 
       <div class="entry">
         <div class="entry-row">
-          <span class="entry-title">Student <span class="sep">@</span> <a href="https://www.cmu.edu/" target="_blank" rel="noopener noreferrer">Carnegie Mellon</a></span>
+          <h3 class="entry-title">Student <span class="sep">@</span> <a href="https://www.cmu.edu/" target="_blank" rel="noopener noreferrer">Carnegie Mellon</a></h3>
           <span class="entry-meta">StatML + CS</span>
         </div>
       </div>
